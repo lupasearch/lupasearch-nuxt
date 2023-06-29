@@ -22,9 +22,8 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "release": "yarn lint && yarn prepack && npm publish --access public",
-    "lint": "eslint .",
-    "test:watch": "vitest watch"
+    "release": "yarn lint && yarn prepack && yarn publish --access public",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@getlupa/vue": "0.0.8",
