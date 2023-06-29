@@ -21,11 +21,11 @@ yarn add --dev @getlupa/nuxt @getlupa/vue
 npm install --save-dev @getlupa/nuxt @getlupa/vue
 ```
 
-2. Add `LupaSearch` to the `modules` section of `nuxt.config.ts`
+2. Add `"@getlupa/nuxt"` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
-  modules: ["LupaSearch"],
+  modules: ["@getlupa/nuxt"],
 });
 ```
 
@@ -33,7 +33,7 @@ That's it! You can now use LupaSearch Nuxt module in your Nuxt app ✨
 
 ## Basic usage
 
-See main repo for full configuration examples:
+See main repo for full configuration examples.
 
 ```html
 <script lang="ts" setup>
