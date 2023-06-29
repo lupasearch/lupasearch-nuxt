@@ -1,58 +1,97 @@
-<!--
-Get your module up and running quickly.
-
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: My Module
-- Package name: my-module
-- Description: My new Nuxt module
--->
-
-# My Module
-
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![License][license-src]][license-href]
-[![Nuxt][nuxt-src]][nuxt-href]
-
-My new Nuxt module for doing amazing things.
-
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
+# LupaSearch Client - Nuxt
 
 ## Features
 
-<!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+Nuxt module wrapper for LupaSearch client.
+
+For full configuration options see [Main repository](https://github.com/lupasearch/lupasearch-client)
 
 ## Quick Setup
 
-1. Add `my-module` dependency to your project
+1. Add `LupaSearch` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D my-module
+pnpm add -D @getlupa/nuxt @getlupa/vue
 
 # Using yarn
-yarn add --dev my-module
+yarn add --dev @getlupa/nuxt @getlupa/vue
 
 # Using npm
-npm install --save-dev my-module
+npm install --save-dev @getlupa/nuxt @getlupa/vue
 ```
 
-2. Add `my-module` to the `modules` section of `nuxt.config.ts`
+2. Add `LupaSearch` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
-  modules: [
-    'my-module'
-  ]
-})
+  modules: ["LupaSearch"],
+});
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+That's it! You can now use LupaSearch Nuxt module in your Nuxt app ✨
+
+## Basic usage
+
+See main repo for full configuration examples:
+
+```html
+<script lang="ts" setup>
+  import "@getlupa/vue/dist/style.css";
+
+  const boxOptions = SEARCH_BOX_CONFIGURATION;
+
+  const resultOptions = SEARCH_RESULTS_CONFIGURATION;
+</script>
+
+<template>
+  <div>
+    <div>
+      <LupaSearchBox :options="boxOptions" />
+    </div>
+    <div style="margin-top: 25px">
+      <LupaSearchResults :options="resultOptions"> </LupaSearchResults>
+    </div>
+  </div>
+</template>
+<style>
+  .wrapper {
+    margin: 25px;
+  }
+</style>
+```
+
+## Using Slots
+
+```html
+<script lang="ts" setup>
+  import "@getlupa/vue/dist/style.css";
+
+  const boxOptions = SEARCH_BOX_CONFIGURATION;
+  const resultOptions = SEARCH_RESULTS_CONFIGURATION;
+</script>
+
+<template>
+  <div>
+    <div>
+      <LupaSearchBox :options="boxOptions" />
+    </div>
+    <div style="margin-top: 25px">
+      <LupaSearchResults :options="resultOptions">
+        <template #productCard="props">
+          <div :style="props.style">
+            <div style="margin-bottom: 25px">{{ props.product.name }}</div>
+          </div>
+        </template>
+      </LupaSearchResults>
+    </div>
+  </div>
+</template>
+```
+
+## Full Example
+
+See `/playground` app to see full example with sample configuration using LupaSearch demo project.
 
 ## Development
 
@@ -72,23 +111,6 @@ npm run dev:build
 # Run ESLint
 npm run lint
 
-# Run Vitest
-npm run test
-npm run test:watch
-
 # Release new version
 npm run release
 ```
-
-<!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/my-module
-
-[npm-downloads-src]: https://img.shields.io/npm/dm/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/my-module
-
-[license-src]: https://img.shields.io/npm/l/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/my-module
-
-[nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
-[nuxt-href]: https://nuxt.com
