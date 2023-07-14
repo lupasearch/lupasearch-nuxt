@@ -50,7 +50,7 @@ export const SEARCH_RESULTS_CONFIGURATION: SearchResultsOptions = {
         top: true,
         bottom: false,
       },
-      sizes: [12, 24, 36, 72],
+      sizes: [10, 15, 30, 45],
     },
     pageSelection: {
       position: {
