@@ -580,10 +580,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.43.0.tgz#559ca3d9ddbd6bf907ad524320a0d14b85586af0"
   integrity sha512-s2UHCoiXfxMvmfzqoN+vrQ84ahUSYde9qNO1MdxmoEhyHWsfmwOpFlwYV+ePJEVc7gFnATGUi376WowX1N7tFg==
 
-"@getlupa/vue@0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@getlupa/vue/-/vue-0.0.14.tgz#c6ed75b80a945349c4bb4a73e2fa5d6ba7e3f2ad"
-  integrity sha512-o0Q5OxrvaMR7DJamCmc0aEjQDQOS75i645gltEiNyCKPwpnXMQTiWBgXKP2ysPeKij7zPm5u/aPqZa+GMiVxJA==
+"@getlupa/vue@0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@getlupa/vue/-/vue-0.1.9.tgz#27aa3af00f846514eb174c44ce7131848596c18f"
+  integrity sha512-AbSSgffcrmMhjx+dS9ByFdfwfYIlcW+Ik6rCrRvHwc23b5oaZnKQVKpI1ohOlg7g7aq0VLwJKcdSr/bHMJ2KpA==
 
 "@hapi/hoek@^9.0.0":
   version "9.3.0"

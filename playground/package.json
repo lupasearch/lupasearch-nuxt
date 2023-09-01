@@ -11,6 +11,6 @@
     
   },
   "devDependencies": {
-    "nuxt": "latest"
+    "nuxt": "^3.6.5"
   }
 }
