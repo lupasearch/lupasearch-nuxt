@@ -1196,7 +1196,7 @@
     pathe "^1.1.0"
     unbuild "^1.2.1"
 
-"@nuxt/schema@3.6.1", "@nuxt/schema@^3.5.2", "@nuxt/schema@^3.6.0":
+"@nuxt/schema@3.6.1", "@nuxt/schema@^3.6.0":
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.6.1.tgz#aadeeede96b00ea3f5a019bfb8f5fb80e5b7c6a3"
   integrity sha512-+4pr0lkcPP5QqprYV+/ujmBkt2JHmi/v5vaxCrMhElUFgifvJAfT89BkGFn6W7pz0b8Vd3GcByFUWI7/wX/Pcw==
@@ -1211,7 +1211,7 @@
     unimport "^3.0.10"
     untyped "^1.3.2"
 
-"@nuxt/schema@3.7.0":
+"@nuxt/schema@3.7.0", "@nuxt/schema@^3.6.5":
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.7.0.tgz#60e78916acea20e8c643b8ddbd16fde1bc89742d"
   integrity sha512-fNRAubny1x6rIibm/HcacnEGeAQri/FkJ5ei24aY4YjQ12+xDfi7bljfFr6C2+CrEGc1beYd4OQcUqXqEpz5+g==
