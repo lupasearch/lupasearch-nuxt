@@ -24,6 +24,13 @@ export const SEARCH_BOX_CONFIGURATION: SearchBoxOptions = {
   links: {
     searchResults: "/search",
   },
+  hideMoreResultsButtonOnNoResults: true,
+  showNoResultsPanel: true,
+  callbacks: {
+    onSearchBoxResults: (context) => {
+      console.log('searchBoxResults', context)
+    }
+  },
   panels: [
     {
       type: "suggestion",
