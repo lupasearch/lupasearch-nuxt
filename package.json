@@ -1,6 +1,6 @@
 {
   "name": "@getlupa/nuxt",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "LupaSearch Client module for Nuxt",
   "repository": "https://github.com/lupasearch/lupasearch-nuxt",
   "license": "MIT",
