@@ -89,6 +89,39 @@ See main repo for full configuration examples.
 </template>
 ```
 
+### Reporting click events from slots
+
+```html
+<script lang="ts" setup>
+  import "@getlupa/vue/dist/style.css";
+
+  const boxOptions = SEARCH_BOX_CONFIGURATION;
+  const resultOptions = SEARCH_RESULTS_CONFIGURATION;
+</script>
+
+<template>
+  <div>
+    <div>
+      <LupaSearchBox :options="boxOptions">
+        <template #productCard="props">
+          <div>{{ props.item.name }}</div>
+          <button
+            @click="props.itemClicked({ item: props.item, eventType: 'itemClick' })"
+          >
+            Click me!
+          </button>
+          <button
+            @click="props.itemClicked({ item: props.item, eventType: 'addToCart' })"
+          >
+            Add To Cart!
+          </button>
+        </template>
+      </LupaSearchBox>
+    </div>
+  </div>
+</template>
+```
+
 ## SSR
 
 To enable full SSR support (where initial content is rendered on a server) there are some additional steps.
