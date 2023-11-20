@@ -15,26 +15,31 @@ export default defineNuxtModule<LupaSearchOptions>({
   },
   // Default configuration options of the Nuxt module
   defaults: {},
-  setup() {
+  async setup() {
     const resolver = createResolver(import.meta.url);
     addPlugin(resolver.resolve("./runtime/lupaSearch"));
+
+    const path =
+      process.env.NODE_ENV === "production"
+        ? "@getlupa/vue"
+        : await resolver.resolvePath("@getlupa/vue");
 
     addComponent({
       name: "LupaSearchBox",
       export: "SearchBox",
-      filePath: "@getlupa/vue",
+      filePath: path,
     });
 
     addComponent({
       name: "LupaSearchResults",
       export: "SearchResults",
-      filePath: "@getlupa/vue",
+      filePath: path,
     });
 
     addComponent({
       name: "LupaRecommender",
       export: "Recommender",
-      filePath: "@getlupa/vue",
+      filePath: path,
     });
   },
 });
