@@ -12,13 +12,13 @@ For full configuration options see [Main repository](https://github.com/lupasear
 
 ```bash
 # Using pnpm
-pnpm add -D @getlupa/nuxt @getlupa/vue
+pnpm add -D @getlupa/nuxt
 
 # Using yarn
-yarn add --dev @getlupa/nuxt @getlupa/vue
+yarn add --dev @getlupa/nuxt
 
 # Using npm
-npm install --save-dev @getlupa/nuxt @getlupa/vue
+npm install --save-dev @getlupa/nuxt
 ```
 
 2. Add `"@getlupa/nuxt"` to the `modules` section of `nuxt.config.ts`
